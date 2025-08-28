@@ -14,9 +14,9 @@ class src_trans extends uvm_sequence_item;
 	rand bit [9:0] Hlength;
 
 	constraint valid_addr{Haddr inside {[32'h8000_0000:32'h8000_03ff],
-						[32'h8400_0000:32'h8000_03ff],
-						[32'h8800_0000:32'h8000_03ff],
-						[32'h8c00_0000:32'h8000_03ff]};}
+										[32'h8400_0000:32'h8400_03ff],
+										[32'h8800_0000:32'h8800_03ff],
+										[32'h8c00_0000:32'h8c00_03ff]};}
 
 	constraint Hsize_value{Hsize dist {0,1,2};}
 
